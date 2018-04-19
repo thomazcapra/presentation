@@ -20,8 +20,17 @@
     article {
         flex-grow: 1;
     }
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 }
 
 .aside-card {
     min-width: 261px;
+    max-width: 300px;
+
+    @media (max-width: 700px) {
+       align-self: center;
+    }
 }
