@@ -7,21 +7,26 @@
 </header>
 
 <main class="main-content">
-    <aside>
-        <app-about-me>
+    <aside class="aside-card">
+        <app-about-me [age]="24"
+            [experience]="'About 2 years'"
+            [degree]="'Bachelor Degree - Computer Science'">
         </app-about-me>
     </aside>
 
     <article>
         <mat-horizontal-stepper>
             <mat-step label="Past">
-                Past
+                <app-past>
+                </app-past>
             </mat-step>
             <mat-step label="Present">
-                Present
+                <app-present>
+                </app-present>
             </mat-step>
             <mat-step label="Future">
-                Future
+                <app-present>
+                </app-present>
             </mat-step>
         </mat-horizontal-stepper>
     </article>

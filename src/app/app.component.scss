@@ -1,6 +1,16 @@
+@import 'variables';
+
 .presentation-header,
 .presentation-footer {
     height: 5rem;
+
+    > * {
+        background-color: $primary;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .main-content {
@@ -10,4 +20,8 @@
     article {
         flex-grow: 1;
     }
+}
+
+.aside-card {
+    min-width: 261px;
 }
