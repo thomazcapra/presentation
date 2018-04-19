@@ -2,6 +2,11 @@
     <mat-card>
         <mat-icon>code</mat-icon>
         <label color="accent"> {{ name }}</label>
+        <img class="bold-logo"
+            (logoAnimation)="state"
+            [@logoAnimation]="animationState"
+            (@logoAnimation.done)="animationDone($event)"
+            src="../assets/image/bold-icon.png">
     </mat-card>
 </header>
 

@@ -1,15 +1,19 @@
+import { logoAnimation, animationStateList } from './animations/logo.animation';
 import { Component, AfterViewInit, OnDestroy, OnInit, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
+    animations: [ logoAnimation ]
 })
 export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
     name = 'Thomaz Capra';
     message: string;
     horizontalStepper: boolean;
+    animationState: string;
+    currentAnimationIndex: number;
 
     private changingMessage = <string[]>[
         'Software Developer',
@@ -34,6 +38,8 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
         this.currentIndex = 0;
         this.secondMessage = false;
         this.erasing = false;
+        this.currentAnimationIndex = 0;
+        this.animationState = animationStateList[0];
         this.horizontalStepper = window.innerWidth > 700;
     }
 
@@ -65,6 +71,15 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
     ngOnDestroy(): void {
         if (this.intervalID) {
             clearInterval(this.intervalID);
+        }
+    }
+
+    animationDone($event) {
+        if (this.currentAnimationIndex >= animationStateList.length - 1) {
+            this.currentAnimationIndex = 0;
+            this.animationState = animationStateList[0];
+        } else {
+            this.animationState = animationStateList[++this.currentAnimationIndex];
         }
     }
 }
