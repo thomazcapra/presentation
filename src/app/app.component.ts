@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnDestroy, OnInit } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, OnInit, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -9,6 +9,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
     name = 'Thomaz Capra';
     message: string;
+    horizontalStepper: boolean;
 
     private changingMessage = <string[]>[
         'Software Developer',
@@ -21,14 +22,19 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
     private intervalID: any;
 
-    constructor() {
-
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+        const width = event.target.innerWidth;
+        this.horizontalStepper = window.innerWidth > 700;
     }
+
+    constructor() { }
 
     ngOnInit(): void {
         this.currentIndex = 0;
         this.secondMessage = false;
         this.erasing = false;
+        this.horizontalStepper = window.innerWidth > 700;
     }
 
     ngAfterViewInit(): void {
