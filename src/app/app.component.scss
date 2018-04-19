@@ -1,0 +1,13 @@
+.presentation-header,
+.presentation-footer {
+    height: 5rem;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+
+    article {
+        flex-grow: 1;
+    }
+}
