@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatStepperModule } from '@angular/material';
+import { MatCardModule, MatStepperModule, MatIconModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,6 +19,7 @@ import { EmployementInfoComponent } from './components/employement-info/employem
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
+        MatIconModule,
         MatStepperModule,
         MatCardModule
     ],
