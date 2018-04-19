@@ -1,3 +1,8 @@
-<p>
-  future works!
-</p>
+<div>
+    <app-card-info *ngFor="let item of futureData"
+        [title]="item.title"
+        [where]="item.where"
+        [description]="item.description"
+        [icon]="item.icon">
+    </app-card-info>
+</div>
