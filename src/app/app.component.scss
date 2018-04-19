@@ -5,17 +5,35 @@
     height: 5rem;
 
     > * {
-        background-color: $primary;
-        color: white;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
 
+.presentation-header {
+    > * {
+        background-color: #335fa3;
+        color: white;
+    }
+}
+
+.presentation-footer {
+    > * {
+        background-color: #303b65;
+        color: white;
+    }
+}
+
+
 .main-content {
     flex-grow: 1;
+    overflow-y: scroll;
     display: flex;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     article {
         flex-grow: 1;

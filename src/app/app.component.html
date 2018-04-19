@@ -1,8 +1,7 @@
 <header class="presentation-header">
     <mat-card>
         <mat-icon>code</mat-icon>
-        <label color="accent"> {{ name }} &nbsp;-&nbsp;</label>
-        <strong> {{ message }} </strong>
+        <label color="accent"> {{ name }}</label>
     </mat-card>
 </header>
 
@@ -15,7 +14,8 @@
     </aside>
 
     <article>
-        <ng-template [ngIf]="horizontalStepper" [ngIfElse]="vertical">
+        <ng-template [ngIf]="horizontalStepper"
+            [ngIfElse]="vertical">
             <mat-horizontal-stepper>
                 <mat-step label="Past">
                     <app-past>
@@ -54,6 +54,6 @@
 
 <footer class="presentation-footer">
     <mat-card>
-        Footer
+        <strong> &nbsp;{{ message }}&nbsp; </strong>
     </mat-card>
 </footer>
