@@ -59,7 +59,7 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
                 this.message = this.changingMessage[+this.secondMessage].substring(0,
                     this.erasing ? this.currentIndex-- : this.currentIndex++);
 
-            }, 150);
+            }, 75);
     }
 
     ngOnDestroy(): void {

@@ -1,3 +1,4 @@
+import { CardInfoComponent } from './components/card-info/card-info.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,7 +17,8 @@ import { PresentComponent } from './components/present/present.component';
         AboutMeComponent,
         PastComponent,
         PresentComponent,
-        FutureComponent
+        FutureComponent,
+        CardInfoComponent
     ],
     imports: [
         BrowserAnimationsModule,

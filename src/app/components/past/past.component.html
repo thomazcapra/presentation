@@ -1,3 +1,8 @@
-<mat-card>
-  Past
-</mat-card>
+<div class="past-area">
+    <app-card-info *ngFor="let item of pastData"
+        [title]="item.title"
+        [where]="item.where"
+        [description]="item.description"
+        [icon]="item.icon">
+    </app-card-info>
+</div>

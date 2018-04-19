@@ -1,0 +1,14 @@
+<mat-card>
+    <div class="card-content">
+        <div>
+            <h3 *ngIf="title"> {{ title }} </h3>
+            <h4 *ngIf="where"> {{ where }} </h4>
+            <span *ngIf="description"> {{ description }} </span>
+        </div>
+        <div class="icon-area">
+            <img *ngIf="icon"
+                class="card-icon"
+                [src]="icon">
+        </div>
+    </div>
+</mat-card>
