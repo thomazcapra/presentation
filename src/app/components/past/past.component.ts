@@ -11,16 +11,10 @@ export class PastComponent implements OnInit {
     pastData = <Array<CardInfoModel>>
         [
             new CardInfoModel(
-                'Technical in Accounting',
-                'http://www.atua.ag/imgs/clientes/politecnico.png',
-                'Colégio Politécnico de Sorocaba',
-                'I have worked with accounting'
-            ),
-            new CardInfoModel(
                 'Bachelor degree - Computer Science',
                 'http://www.empts.com.br/system/news/images/000/000/006/internal/ufscar.jpg?1381417219',
                 'Federal University of São Carlos',
-                'I was data structure course monitor'
+                'I was monitor in the course: Data Structures'
             ),
             new CardInfoModel(
                 'System Analyst',

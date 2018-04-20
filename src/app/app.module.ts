@@ -1,3 +1,4 @@
+import { CardTechComponent } from './components/card-tech/card-tech.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,8 @@ import { PresentComponent } from './components/present/present.component';
         PastComponent,
         PresentComponent,
         FutureComponent,
-        CardInfoComponent
+        CardInfoComponent,
+        CardTechComponent
     ],
     imports: [
         BrowserAnimationsModule,
