@@ -11,7 +11,7 @@ export class FutureComponent implements OnInit {
     futureData = <Array<CardInfoModel>>[
         new CardInfoModel(
             'Full Stack Developer / Front End Developer',
-            `../assets/image/bold-icon.png`,
+            `./assets/image/bold-icon.png`,
             'Bold International',
             'Almost there :)'
         ),
@@ -22,7 +22,6 @@ export class FutureComponent implements OnInit {
             'Maybe cyber security'
         )
     ];
-
 
     constructor() { }
 
