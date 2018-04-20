@@ -1,3 +1,4 @@
+import { PersonalData } from './model/personal-data';
 import { logoAnimation, animationStateList } from './animations/logo.animation';
 import { Component, AfterViewInit, OnDestroy, OnInit, HostListener } from '@angular/core';
 
@@ -9,11 +10,18 @@ import { Component, AfterViewInit, OnDestroy, OnInit, HostListener } from '@angu
 })
 export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
-    name = 'Thomaz Capra';
+    personalData = new PersonalData(
+        'Thomaz Capra',
+        24,
+        `Bachelor's Degree - Computer Science`,
+        'About 2 years'
+    );
+
     message: string;
     horizontalStepper: boolean;
     animationState: string;
     currentAnimationIndex: number;
+
 
     private changingMessage = <string[]>[
         'Software Developer',

@@ -11,7 +11,7 @@ export class PastComponent implements OnInit {
     pastData = <Array<CardInfoModel>>
         [
             new CardInfoModel(
-                'Bachelor degree - Computer Science',
+                `Bachelor's Degree - Computer Science`,
                 'http://www.empts.com.br/system/news/images/000/000/006/internal/ufscar.jpg?1381417219',
                 'Federal University of São Carlos',
                 'I was monitor in the course: Data Structures'

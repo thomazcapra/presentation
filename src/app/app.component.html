@@ -3,7 +3,7 @@
         <mat-icon>code</mat-icon>
         <label class="name"
             [style.margin]="'0 1rem'"
-            [style.fontSize.rem]="'1.8'"> {{ name }}</label>
+            [style.fontSize.rem]="'1.8'"> {{ personalData.name }}</label>
         <img class="bold-logo"
             [@logoAnimation]="animationState"
             (@logoAnimation.done)="animationDone($event)"
@@ -13,9 +13,9 @@
 
 <main class="main-content">
     <aside class="aside-card">
-        <app-about-me [age]="24"
-            [experience]="'About 2 years'"
-            [degree]="'Bachelor Degree - Computer Science'">
+        <app-about-me [age]="personalData.age"
+            [experience]="personalData.experience"
+            [degree]="personalData.degree">
         </app-about-me>
     </aside>
 
