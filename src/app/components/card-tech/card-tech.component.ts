@@ -20,7 +20,11 @@ export class CardTechComponent implements OnInit {
         '../assets/image/eclipse.png',
         '../assets/image/vscode.png',
         '../assets/image/vstudio.png',
-        '../assets/image/win10.png'
+        '../assets/image/win10.png',
+        '../assets/image/trello.png',
+        '../assets/image/jira.png',
+        '../assets/image/slack.png',
+        '../assets/image/bitbucket.png'
     ];
 
     constructor() { }
