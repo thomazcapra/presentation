@@ -5,7 +5,7 @@ import { Component, AfterViewInit, OnDestroy, OnInit, HostListener } from '@angu
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    animations: [ logoAnimation ]
+    animations: [logoAnimation]
 })
 export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
@@ -75,11 +75,10 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
     }
 
     animationDone($event) {
-        if (this.currentAnimationIndex >= animationStateList.length - 1) {
-            this.currentAnimationIndex = 0;
-            this.animationState = animationStateList[0];
-        } else {
-            this.animationState = animationStateList[++this.currentAnimationIndex];
-        }
+        this.animationState = animationStateList[
+            (this.currentAnimationIndex >= animationStateList.length - 1)
+                ? this.currentAnimationIndex = 0
+                : ++this.currentAnimationIndex
+        ];
     }
 }

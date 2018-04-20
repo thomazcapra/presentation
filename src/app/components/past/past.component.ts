@@ -20,7 +20,7 @@ export class PastComponent implements OnInit {
                 'System Analyst',
                 'https://setis.com.br/homepage/img/logo_setis.gif',
                 'SETIS Automação e Sistemas Ltda',
-                'I was responsible for some applications'
+                'Applications: Test PinPad, ZipLog, VerifoneLoader'
             ),
         ];
 

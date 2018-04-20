@@ -1,7 +1,9 @@
 <header class="presentation-header">
     <mat-card>
         <mat-icon>code</mat-icon>
-        <label color="accent"> {{ name }}</label>
+        <label class="name"
+            [style.margin]="'0 1rem'"
+            [style.fontSize.rem]="'1.8'"> {{ name }}</label>
         <img class="bold-logo"
             [@logoAnimation]="animationState"
             (@logoAnimation.done)="animationDone($event)"
