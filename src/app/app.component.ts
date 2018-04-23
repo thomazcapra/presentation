@@ -10,7 +10,7 @@ import { Component, AfterViewInit, OnDestroy, OnInit, HostListener } from '@angu
 })
 export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
-    personalData = new PersonalData(
+    personalData: PersonalData = new PersonalData(
         'Thomaz Capra',
         24,
         `Bachelor's Degree - Computer Science`,
@@ -21,7 +21,6 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
     horizontalStepper: boolean;
     animationState: string;
     currentAnimationIndex: number;
-
 
     private changingMessage = <string[]>[
         'Software Developer',
@@ -36,11 +35,13 @@ export class AppComponent implements AfterViewInit, OnDestroy, OnInit {
 
     @HostListener('window:resize', ['$event'])
     onResize(event) {
-        const width = event.target.innerWidth;
-        this.horizontalStepper = window.innerWidth > 700;
+        const width = event.target.innerWidth || event.detail.width;
+        console.log(width);
+        this.horizontalStepper = width > 700;
     }
 
-    constructor() { }
+    constructor() {
+    }
 
     ngOnInit(): void {
         this.currentIndex = 0;
