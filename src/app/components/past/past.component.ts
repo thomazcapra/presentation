@@ -12,13 +12,13 @@ export class PastComponent implements OnInit {
         [
             new CardInfoModel(
                 `Bachelor's Degree - Computer Science`,
-                'http://www.empts.com.br/system/news/images/000/000/006/internal/ufscar.jpg?1381417219',
+                './assets/image/ufscar.png',
                 'Federal University of São Carlos',
                 'I was monitor in the course: Data Structures'
             ),
             new CardInfoModel(
                 'System Analyst',
-                'https://setis.com.br/homepage/img/logo_setis.gif',
+                './assets/image/setis.gif',
                 'SETIS Automação e Sistemas Ltda',
                 'Applications: Test PinPad, ZipLog, VerifoneLoader'
             ),
