@@ -2,60 +2,58 @@
 
 .presentation-header,
 .presentation-footer {
-
-    > * {
-        border-radius: 0px;
-        padding: 0.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  > * {
+    border-radius: 0px;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .presentation-header {
-    > * {
-        background-color: #335fa3;
-        color: white;
-    }
+  > * {
+    background-color: #335fa3;
+    color: white;
+  }
 }
 
 .presentation-footer {
-    > * {
-        background-color: #303b65;
-        color: white;
-    }
+  > * {
+    background-color: #303b65;
+    color: white;
+  }
 }
 
-
 .main-content {
+  flex-grow: 1;
+  overflow-y: scroll;
+  display: flex;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  article {
     flex-grow: 1;
-    overflow-y: scroll;
-    display: flex;
+    margin: 1rem;
+  }
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    article {
-        flex-grow: 1;
-        margin: 1rem;
-    }
-
-    @media (max-width: 700px) {
-        flex-direction: column;
-    }
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
 .aside-card {
-    min-width: 261px;
-    max-width: 300px;
-    margin: 1rem;
+  min-width: 261px;
+  max-width: 300px;
+  margin: 1rem;
 
-    @media (max-width: 700px) {
-       align-self: center;
-    }
+  @media (max-width: 700px) {
+    align-self: center;
+  }
 }
 
 .bold-logo {
-    max-width: 3rem;
+  max-width: 3rem;
 }

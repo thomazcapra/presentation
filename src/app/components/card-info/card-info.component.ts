@@ -1,20 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-card-info',
-    templateUrl: './card-info.component.html',
-    styleUrls: ['./card-info.component.scss']
+  selector: 'app-card-info',
+  templateUrl: './card-info.component.html',
+  styleUrls: ['./card-info.component.scss']
 })
 export class CardInfoComponent implements OnInit {
+  @Input() title: string;
+  @Input() where: string;
+  @Input() description: string;
+  @Input() icon: string;
 
-    @Input('title') title: string;
-    @Input('where') where: string;
-    @Input('description') description: string;
-    @Input('icon') icon: string;
+  constructor() {}
 
-    constructor() { }
-
-    ngOnInit() {
-    }
-
+  ngOnInit() {}
 }
