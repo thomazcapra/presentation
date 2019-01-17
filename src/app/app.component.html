@@ -1,65 +1,65 @@
 <header class="presentation-header">
-    <mat-card>
-        <mat-icon>code</mat-icon>
-        <label class="name"
-            [style.margin]="'0 1rem'"
-            [style.fontSize.rem]="'1.8'"> {{ personalData.name }}</label>
-        <img class="bold-logo"
-            [@logoAnimation]="animationState"
-            (@logoAnimation.done)="animationDone($event)"
-            src="./assets/image/bold-icon.png">
-    </mat-card>
+  <mat-card>
+    <mat-icon>code</mat-icon>
+    <label class="name"
+           [style.margin]="'0 1rem'"
+           [style.fontSize.rem]="'1.8'"> {{ personalData.name }}</label>
+    <img class="bold-logo"
+         [@logoAnimation]="animationState"
+         (@logoAnimation.done)="animationDone()"
+         src="./assets/image/bold-icon.png">
+  </mat-card>
 </header>
 
 <main class="main-content">
-    <aside class="aside-card">
-        <app-about-me [age]="personalData.age"
-            [experience]="personalData.experience"
-            [degree]="personalData.degree">
-        </app-about-me>
-    </aside>
+  <aside class="aside-card">
+    <app-about-me [age]="personalData.age"
+                  [experience]="personalData.experience"
+                  [degree]="personalData.degree">
+    </app-about-me>
+  </aside>
 
-    <article>
-        <ng-template [ngIf]="horizontalStepper"
-            [ngIfElse]="vertical">
-            <mat-horizontal-stepper>
-                <mat-step label="Past">
-                    <app-past>
-                    </app-past>
-                </mat-step>
-                <mat-step label="Present">
-                    <app-present>
-                    </app-present>
-                </mat-step>
-                <mat-step label="Future">
-                    <app-future>
-                    </app-future>
-                </mat-step>
-            </mat-horizontal-stepper>
-        </ng-template>
+  <article>
+    <ng-template [ngIf]="horizontalStepper"
+                 [ngIfElse]="vertical">
+      <mat-horizontal-stepper>
+        <mat-step label="Past">
+          <app-past>
+          </app-past>
+        </mat-step>
+        <mat-step label="Present">
+          <app-present>
+          </app-present>
+        </mat-step>
+        <mat-step label="Future">
+          <app-future>
+          </app-future>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </ng-template>
 
-        <ng-template #vertical>
-            <mat-vertical-stepper>
-                <mat-step label="Past">
-                    <app-past>
-                    </app-past>
-                </mat-step>
-                <mat-step label="Present">
-                    <app-present>
-                    </app-present>
-                </mat-step>
-                <mat-step label="Future">
-                    <app-future>
-                    </app-future>
-                </mat-step>
-            </mat-vertical-stepper>
-        </ng-template>
+    <ng-template #vertical>
+      <mat-vertical-stepper>
+        <mat-step label="Past">
+          <app-past>
+          </app-past>
+        </mat-step>
+        <mat-step label="Present">
+          <app-present>
+          </app-present>
+        </mat-step>
+        <mat-step label="Future">
+          <app-future>
+          </app-future>
+        </mat-step>
+      </mat-vertical-stepper>
+    </ng-template>
 
-    </article>
+  </article>
 </main>
 
 <footer class="presentation-footer">
-    <mat-card>
-        <strong> &nbsp;{{ message }}&nbsp; </strong>
-    </mat-card>
+  <mat-card>
+    <strong> &nbsp;{{ message }}&nbsp; </strong>
+  </mat-card>
 </footer>
